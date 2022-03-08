@@ -5,5 +5,4 @@ NAMA KELOMPOK ANDA: Nahu
 Ketua Kelompok: Ahmad Zidan
 Anggota 1: Arifah Amelia Tijani
 Anggota 2: Devi Luthfitaningrum
-Anggota 3: Dicky Muhammad Rizal
-Anggota 4:
+Anggota 3: Dicky Muhammad Rizal - 19/440306/TK/48633
