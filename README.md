@@ -3,7 +3,6 @@ Aplikasi web Nahu.id untuk koreksi tata bahasa Indonesia dengan menggunakan rule
 
 NAMA KELOMPOK ANDA: Nahu
 Ketua Kelompok: Ahmad Zidan
-Anggota 1: Arifah Amelia Tijani
-Anggota 2: Devi Luthfitaningrum
-Anggota 3: Dicky Muhammad Rizal
-Anggota 4:
+Anggota 1: Devi Luthfitaningrum
+Anggota 2: Dicky Muhammad Rizal
+Anggota 3: Arifah Amelia Tijani-19/446767/TK/49872
