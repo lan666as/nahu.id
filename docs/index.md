@@ -1,37 +1,169 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/lan666as/nahu.id/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+# Nahu.id
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Anggota Kelompok
+<table>
+<thead>
+<tr>
+<th align="center">Nama</th>
+<th align="center">NIM</th>
+<th align="center">Peran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Ahmad Zidan</td>
+<td align="center">19/439806/TK/48536</td>
+<td align="center">Project Manager &amp; Cloud Engineer</td>
+</tr>
+<tr>
+<td align="center">Arifah Amelia Tijani</td>
+<td align="center">19/446767/TK/49872</td>
+<td align="center">UI/UX Designer</td>
+</tr>
+<tr>
+<td align="center">Devi Luthfitaningrum</td>
+<td align="center">19/440305/TK/48632</td>
+<td align="center">AI Engineer</td>
+</tr>
+<tr>
+<td align="center">Dicky Muhammad Rizal</td>
+<td align="center">19/440306/TK/48633</td>
+<td align="center">Software Engineer</td>
+</tr>
+</tbody>
+</table>
 
-### Markdown
+Project Senior Project TI
+Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Nama Produk
 
-```markdown
-Syntax highlighted code block
+> Nahu.id
 
-# Header 1
-## Header 2
-### Header 3
+## Jenis Produk
 
-- Bulleted
-- List
+> Aplikasi Web
 
-1. Numbered
-2. List
+## Permasalahan yang dipecahkan
 
-**Bold** and _Italic_ and `Code` text
+### Latar Belakang
 
-[Link](url) and ![Image](src)
-```
+> Bahasa adalah kemampuan yang hanya dimiliki manusia untuk berkomunikasi dengan manusia lainnya menggunakan tanda, misalnya kata dan gerakan. Kesalahan penulisan bahasa baku kalimat bahasa Indonesia sering terjadi. Banyak orang yang tidak memahami standar penulisan dalam bahasa Indonesia. Kesalahan tentu mengurangi kualitas teks dan maknanya ketika digunakan untuk berkomunikasi. 
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Rumusan Permasalahan
 
-### Jekyll Themes
+ - Bagaimana cara untuk memperbaiki kesalahan penulisan dalam bahasa Indonesia secara otomatis menggunakan teknologi?
+ 
+- Teknologi apa sajakah yang dibutuhkan untuk membuat sistem koreksi tata bahasa secara otomatis?
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lan666as/nahu.id/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Daftar Pustaka
 
-### Support or Contact
+- A. Fahda and A. Purwarianti, "*A statistical and rule-based spelling and grammar checker for Indonesian text,*" 2017 International Conference on Data and Software Engineering (ICoDSE), 2017, pp. 1-6, doi: 10.1109/ICODSE.2017.8285846.
+- F. Rahutomo, A. S. Mulyo and P. Y. Saputra, "*Automatic Grammar Checking System For Indonesian*," 2018 International Conference on Applied Science and Technology (iCAST), 2018, pp. 308-313, doi: 10.1109/iCAST1.2018.8751591.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Ide solusi yang diusulkan beserta rancangan fitur
+
+### Solusi
+
+> Aplikasi web Nahu.id untuk koreksi tata bahasa Indonesia dengan menggunakan *rule-based system*.
+
+### Rancangan Fitur Solusi
+
+| Fitur | Keterangan |
+| :----------------: | :--------------: |
+| Spell Check | Memeriksa ejaan kata yang salah dan memberikan rekomendasi kata terdekat |
+| Punctuation Check | Memeriksa penempatan tanda baca |
+| Next Word Predictor | Memprediksi kata selanjutnya dari kalimat yang sudah ada |
+
+## Analisis Kompetitor (Minimal 3 Kompetitor)
+
+### KOMPETITOR 1
+<table>
+  <tr>
+    <th>Nama</th>
+    <td>Grammarly</td>
+  </tr>
+  <tr>
+    <th>Jenis Kompetitor</th>
+    <td>Indirect</td>
+  </tr>
+    <tr>
+    <th>Jenis Produk</th>
+    <td>Spelling and Grammar Corrector</td>
+  </tr>
+  <tr>
+    <th>Target Customer</th>
+    <td>Akademisi</td>
+  </tr>
+</table>
+
+#### Kelebihan
+-   Memiliki banyak fitur
+-   Mudah diakses
+-   Dikenal luas
+
+#### Kekurangan
+-  Hanya berfungsi dalam bahasa inggris
+
+#### Key Competitive Advantage & Unique Value
+> Nahu.id dapat memeriksa kalimat berbahasa Indonesia
+
+### KOMPETITOR 2
+<table>
+  <tr>
+    <th>Nama</th>
+    <td>Ejaan.id</td>
+  </tr>
+  <tr>
+    <th>Jenis Kompetitor</th>
+    <td>Direct</td>
+  </tr>
+    <tr>
+    <th>Jenis Produk</th>
+    <td>Spell Corrector</td>
+  </tr>
+  <tr>
+    <th>Target Customer</th>
+    <td>Akademisi</td>
+  </tr>
+</table>
+
+#### Kelebihan
+-   Berbahasa Indonesia
+
+#### Kekurangan
+-  Tidak berfungsi dengan baik
+
+#### Key Competitive Advantage & Unique Value
+> Ejaan.id masih belum berfungsi dengan baik ketika input kata masih salah
+
+### KOMPETITOR 3
+<table>
+  <tr>
+    <th>Nama</th>
+    <td>SIPEBI – Aplikasi Penyuntingan Ejaan Bahasa Indonesia</td>
+  </tr>
+  <tr>
+    <th>Jenis Kompetitor</th>
+    <td>Direct</td>
+  </tr>
+    <tr>
+    <th>Jenis Produk</th>
+    <td>Penyunting Ejaan</td>
+  </tr>
+  <tr>
+    <th>Target Customer</th>
+    <td>Akademisi</td>
+  </tr>
+</table>
+
+#### Kelebihan
+- Fiturnya cukup lengkap 
+- Resmi
+
+#### Kekurangan
+-  Tidak multiplatform (hanya bisa dijalankan di Desktop Windows)
+
+#### Key Competitive Advantage & Unique Value
+> Nahu.id dirancang dapat berjalan multiplatform karena berbasis aplikasi web
