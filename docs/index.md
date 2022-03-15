@@ -392,7 +392,6 @@ Akademisi dan pekerja lain yang berhubungan dengan penulisan Bahasa Indonesia fo
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td style='background-color: black'>&nbsp;</td>
-    <td style='background-color: black'>&nbsp; </div>
-    </td>
+    <td style='background-color: black'>&nbsp;</td>
   </tr>
 </table>
