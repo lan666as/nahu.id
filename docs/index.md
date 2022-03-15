@@ -167,3 +167,319 @@ Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universit
 
 #### Key Competitive Advantage & Unique Value
 > Nahu.id dirancang dapat berjalan multiplatform karena berbasis aplikasi web
+
+
+## Metodologi SDLC
+
+### Metodologi yang digunakan
+> *Agile*
+
+### Alasan pemilihan metodologi
+1. Membutuhkan waktu relatif cepat dan time-to-market relatif singkat
+2. Cocok untuk skala tim yang kecil
+3. Adaptif dan dapat menyesuaikan kebutuhan dengan cepat
+4. Dapat mengidentifikasi masalah dalam sistem lebih awal
+5. Prioritas fleksibel yang berfokus pada penyampaian nilai
+
+## Perancangan Tahap 1-3 SDLC
+### Tujuan dari produk
+Membantu pengguna untuk lebih memahami kesalahan tata bahasa dalam tulisan yang telah ia buat sehingga dapat memenuhi kaidah penulisan tata bahasa Indonesia yang baik.
+
+### Pengguna potensial dari produk dan kebutuhan para pengguna tersebut 
+Akademisi dan pekerja lain yang berhubungan dengan penulisan Bahasa Indonesia formal dan baku.
+
+### Use case diagram
+![Use case diagram](assets/diagram_use-case.png "Use case diagram")
+
+### Functional requirements untuk use case yang telah dirancang
+
+<table>
+<thead><tr><th>FR</th><th>Deskripsi</th></tr></thead><tbody>
+ <tr><td>FR 1</td><td>Pengguna dapat mendaftarkan akun ke dalam sistem</td></tr>
+ <tr><td>FR 2</td><td>Pengguna dapat <i>login</i> dengan menggunakan akun yang telah terdaftar di sistem</td></tr>
+ <tr><td>FR 3</td><td>Sistem dapat memvalidasi kredensial login pengguna</td></tr>
+ <tr><td>FR 4</td><td>Pengguna dapat <i>logout</i> dari sistem</td></tr>
+ <tr><td>FR 5</td><td>Pengguna dapat memasukkan tulisan ke sistem</td></tr>
+ <tr><td>FR 6</td><td>Pengguna dapat mengirimkan tulisan ke API sistem untuk dikoreksi</td></tr>
+ <tr><td>FR 7</td><td>Sistem dapat menyediakan API untuk memberikan koreksi terhadap tulisan pengguna dengan menggunakan teknik tertentu</td></tr>
+ <tr><td>FR 8</td><td>Sistem dapat membatasi pemanggilan API</td></tr>
+ <tr><td>FR 9</td><td>Sistem dapat menampilkan koreksi tulisan pengguna</td></tr>
+ <tr><td>FR 10</td><td>Pengguna dapat memilih koreksi tulisan sesuai yang diinginkan</td></tr>
+</tbody></table>
+
+### Entity relationship diagram
+![Entity relationship diagram](assets/diagram_erd.png "Entity relationship diagram")
+
+### Low-fidelity Wireframe
+![Low-fidelity Wireframe untuk halaman login](assets/wireframe_login.png "Low-fidelity Wireframe untuk halaman login")
+![Low-fidelity Wireframe untuk halaman home](assets/wireframe_home.png "Low-fidelity Wireframe untuk halaman home")
+
+### Gantt-Chart pengerjaan proyek dalam kurun waktu 1 semester
+<table border=0 cellpadding=0 cellspacing=0 width=855 style='border-collapse:
+ collapse;table-layout:fixed;width:641pt'>
+ <col width=87 style='mso-width-source:userset;mso-width-alt:3181;width:65pt'>
+ <col width=64 span=12 style='width:48pt'>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=2 height=42 class=xl65 width=87 style='border-bottom:.5pt solid #999999;
+  height:31.5pt;width:65pt'><span style='white-space:pre-wrap'>
+  <div dir=ltr>
+  <meta charset=utf-8>
+  Kegiatan</span></td>
+  <td colspan=12 class=xl66 width=768 style='border-right:.5pt solid #999999;
+  border-left:none;width:576pt'><span style='white-space:pre-wrap'>Pertemuan</span></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=64 style='height:15.75pt;border-top:none;
+  border-left:none;width:48pt'><span style='white-space:pre-wrap'>1</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>2</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>3</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>4</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>5</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>6</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>7</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>8</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>9</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>10</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>11</span></td>
+  <td class=xl70 width=64 style='border-top:none;border-left:none;width:48pt'><span
+  style='white-space:pre-wrap'>12</span></td>
+ </tr>
+ <tr height=42 style='height:31.5pt'>
+  <td height=42 class=xl71 width=87 style='height:31.5pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Brainstorming</span></td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl71 width=87 style='height:15.75pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Planning</span></td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl71 width=87 style='height:15.75pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Analysis</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=105 style='height:78.75pt'>
+  <td height=105 class=xl71 width=87 style='height:78.75pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>UI/UX Designing &amp;
+  Prototyping</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=63 style='height:47.25pt'>
+  <td height=63 class=xl71 width=87 style='height:47.25pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>AI Development</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=105 style='height:78.75pt'>
+  <td height=105 class=xl71 width=87 style='height:78.75pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Website Development &amp;
+  Implementation</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=84 style='height:63.0pt'>
+  <td height=84 class=xl71 width=87 style='height:63.0pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Testing &amp; Integration</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+ </tr>
+ <tr height=105 style='height:78.75pt'>
+  <td height=105 class=xl71 width=87 style='height:78.75pt;border-top:none;
+  width:65pt'><span style='white-space:pre-wrap'>Deployment &amp; Demo
+  Preparation</span></td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl73 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</td>
+  <td class=xl72 width=64 style='border-top:none;border-left:none;width:48pt;
+  overflow-wrap:break-word'>&nbsp;</div>
+  </td>
+ </tr>
+</table>
