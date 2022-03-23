@@ -3,5 +3,3 @@
 azure-functions
 spacy
 spacy-stanza
-json
-nltk
