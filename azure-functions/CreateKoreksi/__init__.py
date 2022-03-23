@@ -4,6 +4,8 @@ import azure.functions as func
 import stanza
 import spacy_stanza
 import json
+import random
+import re
 
 stanza.download("id")
 nlp = spacy_stanza.load_pipeline("id")
@@ -31,16 +33,27 @@ def main(req: func.HttpRequest, docs: func.Out[func.Document]) -> func.HttpRespo
         for sent in doc.sents:
             sent_container = {
                 "sentence" : sent.text,
+                "koreksi" : "",
                 "tokens" : []
             }
-    
+
+            koreksi = []
+
             for token in sent:
                 sent_container["tokens"].append({
                     "text" : token.text,
                     "lemma" : token.lemma_,
                     "pos" : token.pos_
                 })
-            
+
+                if token.pos_ == "PUNCT":
+                    koreksi.append(token.text_with_ws)
+                elif random.random() <= 0.9:
+                    koreksi.append(
+                        "".join([c for c in token.text_with_ws if (random.random() <= 0.9 or re.search(r"\s", c))])
+                    )
+
+            sent_container["koreksi"] = ''.join([token for token in koreksi])
             ret["sentences"].append(sent_container)
         
         new_docs = func.DocumentList()

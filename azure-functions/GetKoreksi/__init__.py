@@ -17,7 +17,8 @@ def main(req: func.HttpRequest, docs:func.DocumentList) -> func.HttpResponse:
 
         for sentence in doc["sentences"]:
             koreksi["sentences"].append({
-                "sentence" : sentence["sentence"]
+                "sentence" : sentence["sentence"],
+                "koreksi" : sentence["koreksi"]
             })
 
         koreksi_list.append(koreksi)
