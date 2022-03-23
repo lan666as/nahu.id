@@ -1,0 +1,4 @@
+.vscode/
+.azure/
+tests/
+local.settings.json
