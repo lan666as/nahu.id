@@ -395,3 +395,17 @@ Akademisi dan pekerja lain yang berhubungan dengan penulisan Bahasa Indonesia fo
     <td style='background-color: black'>&nbsp;</td>
   </tr>
 </table>
+
+## Rancangan Arsitektur Sistem
+![Azure Architecture Diagram](assets/diagram_azure-architecture.png "Azure Architecture Diagram")
+
+Arsitektur aplikasi yang digunakan Nahu mengacu pada model pengembangan Team Data Science Process (TDSP) dengan continuous integration/continuous delivery (CI/CD). TDSP adalah metodologi pengembangan agile khusus untuk proses data science yang tangkas dan iteratif dengan memberikan solusi analisis prediktif dan sistem cerdas secara efisien. TDSP membantu meningkatkan kolaborasi dan pembelajaran dalam tim dengan menekankan pada bagaimana peran-peran anggota dalam tim dapat bekerja bersama dengan semaksimal mungkin. TDSP memiliki tujuan untuk membantu organisasi mendapatkan manfaat dari program sistem cerdas/analitik mereka sepenuhnya.
+Terdapat tiga pemeran utama pada arsitektur skematik yaitu Developer, Data Scientist/ML Engineer, dan User.
+### Developer 
+Developer akan mengembangkan website/aplikasinya pada Integrated Development Environment (IDE) pilihannya, seperti Visual Studio Code. Setelah pengembangan suatu fitur dirasa sudah selesai, developer kemudian akan melakukan commit kode yang dibuat ke repository GitHub.
+### Data Scientist/ML Engineer
+Data Scientist/ML Engineer akan mengembangkan model Machine Learning di environment Python yang dipilih misalnya Jupyter Notebook. Data scientist/ML Engineer menyimpan dataset yang digunakan di Azure Storage. Azure Storage juga digunakan untuk menyimpan hasil model dan code/script yang digunakan dalam proses pelatihan model. Azure Machine Learning terdiri dari beberapa aset yaitu Environment, Pipelines, Models, Experiments, Datasets, dan Endpoints. Azure Machine Learning juga dihubungkan dengan virtual machine yang terkoneksi layanan Azure Cosmos DB dan Azure Kubernetes Service. Azure CosmosDB merupakan layanan database NoSQL yang dikelola untuk pengembangan aplikasi. Sementara Azure Kubernetes Service berfungsi untuk menerima dan mengelola request API yang dilakukan oleh user melalui aplikasi web.
+Antara model machine learning terbaru dengan kode website dari pengembang kemudian digabungkan dalam Azure Pipelines. Azure Pipelines akan memulai build dari code yang dicommit di repository GitHub. Azure Pipelines juga akan mengambil model Machine Learning terbaru dari penyimpanan Blob dan membuat kontainer. 
+Pipeline kemudian bertugas untuk melakukan build menggabungkan code aplikasi dengan model. Selanjutnya hasil build tersebut akan membentuk sebuah image yang dikirimkan ke ACR (Azure Container Registry) untuk disimpan. Image ini yang kemudian di-deploy ke Azure Kubernetes Service dengan bantuan trigger melalui Pipeline Release.
+### User
+User atau pengguna akan menggunakan aplikasi dengan cara meng-generate dokumen mereka di dalam aplikasi web dan kemudian dokumen akan secara otomatis melakukan request API ke Azure Kubernetes Service melewati Azure Load Balancer untuk mendapatkan hasil koreksi.

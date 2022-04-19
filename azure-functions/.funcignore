@@ -1,0 +1,7 @@
+.vscode/
+.azure/
+.venv/
+tests/
+.gitignore
+local.settings.json
+getting_started.md
