@@ -62,9 +62,9 @@ def main(req: func.HttpRequest, docs: func.Out[func.Document]) -> func.HttpRespo
             sent_container["koreksi"] = "".join([token for token in koreksi])
             ret["sentences"].append(sent_container)
 
-        new_docs = func.DocumentList()
-        new_docs.append(func.Document.from_dict(ret))
-        docs.set(new_docs)
+        # new_docs = func.DocumentList()
+        # new_docs.append(func.Document.from_dict(ret))
+        # docs.set(new_docs)
 
         logging.info(doc.text)
         return func.HttpResponse(
