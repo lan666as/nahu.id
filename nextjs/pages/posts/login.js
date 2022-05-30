@@ -22,7 +22,7 @@ export default function Login(){
                 </div>
                 <p className='text-2xl font-medium'>Sign in</p>
                 <p className='mt-4'>If you don’t have an account register</p>
-                <span className='inline-block'>You can <Link href='/posts/signup' className='text-purple font-semibold'>Register here !</Link></span>
+                <span className='inline-block'>You can <Link href='/posts/signup' ><a className='text-purple font-semibold'>Register here!</a></Link></span>
 
                 <form className='mt-16'>
                     

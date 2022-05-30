@@ -19,7 +19,7 @@ export default function SignUp(){
                 </div>
                 <p className='text-2xl font-medium'>Sign Up</p>
                 <p className='mt-4'>If you already have an account register</p>
-                <span className='inline-block'>You can <Link href='/posts/login' className='text-purple font-semibold'>Login here!</Link></span>
+                <span className='inline-block'>You can <Link href='/posts/login' ><a className='text-purple font-semibold'>Login here!</a></Link></span>
 
                 <form className='mt-8'>
                     
