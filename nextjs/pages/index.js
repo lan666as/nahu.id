@@ -1,5 +1,5 @@
 import { FaBars, FaTimes, FaHome,FaSignInAlt ,FaSignOutAlt} from 'react-icons/fa'
-import Image from 'next/image'
+// import Image from 'next/image'
 import NextLink from 'next/link'
 import {useState} from 'react'
 import Head from 'next/head'
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
+        <img
             src={"/profile.jpg"}
             alt="Picture of the author"
             width="30px"
