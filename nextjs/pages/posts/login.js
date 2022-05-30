@@ -1,15 +1,19 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { GoMail } from "react-icons/go";
 import { FiLock } from "react-icons/fi";
+import Link from 'next/link';
 
 export default function Login(){
+    const providers = ['twitter', 'github'];
+    // const redirect = window.location.origin;
+
     return(
     <>
         <div className="flex h-screen justify-center item-center">
             {/* input section */}
             <div className='w-1/2 h-full px-32 pt-12'>
                 <div className='w-full flex justify-center'>
-                <Image
+                <img
                     src={"/logo.svg"}
                     alt="Nahu.id"
                     width="120px" height="120px"
@@ -18,7 +22,7 @@ export default function Login(){
                 </div>
                 <p className='text-2xl font-medium'>Sign in</p>
                 <p className='mt-4'>If you don’t have an account register</p>
-                <span className='inline-block'>You can <a href='/posts/signup' className='text-purple font-semibold'>Register here !</a></span>
+                <span className='inline-block'>You can <Link href='/posts/signup' className='text-purple font-semibold'>Register here !</Link></span>
 
                 <form className='mt-16'>
                     
@@ -55,16 +59,25 @@ export default function Login(){
                         
                     </div>
 
-                    <button type="submit" class="w-full mt-12 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black">
+                    <button type="submit" className="w-full mt-12 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black">
                         Login
-
                     </button>
 
                 </form>
+
+                {/* <div className="menu-list auth">
+                    {!userInfo &&
+                    providers.map((provider) => (
+                        <a key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${redirect}`}>
+                        {provider}
+                        </a>
+                    ))}
+                    {userInfo && <a href={`/.auth/logout?post_logout_redirect_uri=${redirect}`}>Logout</a>}
+                </div> */}
             </div>
             {/* image section */}
             <div className='w-1/2 h-full'>
-                <Image
+                <img
                     src={"/bg-login.png"}
                     alt="Picture of the author"
                     width="100%" height="100%" layout="responsive" objectFit="cover"

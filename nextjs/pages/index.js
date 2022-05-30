@@ -1,14 +1,33 @@
 import { FaBars, FaTimes, FaHome,FaSignInAlt ,FaSignOutAlt} from 'react-icons/fa'
 // import Image from 'next/image'
 import NextLink from 'next/link'
-import {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
 
 export default function Home() {
   // sidebar open and close state
-  const[sidebar,setSidebar] = useState(false)
+  const[sidebar, setSidebar] = useState(false)
   const handleSidebar = () => {
     setSidebar(!sidebar)
+  }
+  const [userInfo, setUserInfo] = useState();
+
+  useEffect(() => {
+    (async () => {
+      setUserInfo(await getUserInfo());
+    })();
+  }, []);
+
+  async function getUserInfo() {
+    try {
+      const response = await fetch('/.auth/me');
+      const payload = await response.json();
+      const { clientPrincipal } = payload;
+      return clientPrincipal;
+    } catch (error) {
+      console.error('No profile could be found');
+      return undefined;
+    }
   }
 
   return (
@@ -101,6 +120,17 @@ export default function Home() {
 
       {/* output section */}
       <div className='bg-white font-normal text-sm w-1/4'>
+        {
+          userInfo && (
+            <div>
+              <div className="user">
+                <p>Welcome</p>
+                <p>{userInfo && userInfo.userDetails}</p>
+                <p>{userInfo && userInfo.identityProvider}</p>
+              </div>
+            </div>
+          )
+        }
         Saran Koreksi
         
         {/* correction pop-up 1 */}
