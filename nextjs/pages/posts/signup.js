@@ -1,6 +1,7 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { GoMail } from "react-icons/go";
 import { FiLock,FiUser } from "react-icons/fi";
+import Link from 'next/link';
 
 export default function SignUp(){
     return(
@@ -9,7 +10,7 @@ export default function SignUp(){
             {/* input section */}
             <div className='w-1/2 h-full px-32 pt-12'>
                 <div className='w-full flex justify-center'>
-                <Image
+                <img
                     src={"/logo.svg"}
                     alt="Nahu.id"
                     width="120px" height="120px"
@@ -18,7 +19,7 @@ export default function SignUp(){
                 </div>
                 <p className='text-2xl font-medium'>Sign Up</p>
                 <p className='mt-4'>If you already have an account register</p>
-                <span className='inline-block'>You can <a href='/posts/login' className='text-purple font-semibold'>Login here!</a></span>
+                <span className='inline-block'>You can <Link href='/posts/login' className='text-purple font-semibold'>Login here!</Link></span>
 
                 <form className='mt-8'>
                     
@@ -51,7 +52,7 @@ export default function SignUp(){
                     </div>
 
 
-                    <button type="submit" class="w-full mt-8 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black">
+                    <button type="submit" className="w-full mt-8 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black">
                         Sign Up
 
                     </button>
@@ -60,7 +61,7 @@ export default function SignUp(){
             </div>
             {/* image section */}
             <div className='w-1/2 h-full'>
-                <Image
+                <img
                     src={"/bg-login.png"}
                     alt="Picture of the author"
                     width="100%" height="100%" layout="responsive" objectFit="cover"
