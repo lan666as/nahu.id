@@ -17,6 +17,7 @@ module.exports = {
       'gray':'#6b7280',
       'blue':'#0ea5e9',
       'purple-light':'#F4F5F9',
+      'gray-light':'#9ca3af',
     },
     extend: {
       transitionProperty:{
@@ -27,5 +28,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

@@ -65,7 +65,7 @@ export default function Home() {
             </NextLink>
           </li>
           <li onClick={handleSidebar}>
-            <NextLink href='/'>
+            <NextLink href='/posts/login'>
               {/* active item */}
               <a className='bg-purple font-medium inline-flex items-center px-4 py-2 transition w-full mt-4 hover:text-black'>
                 <FaSignInAlt className="mr-3" />
@@ -81,10 +81,10 @@ export default function Home() {
     <div className='flex justify-between p-12 h-screen item-center'>
 
       {/* input section */}
-      <div className='bg-white font-normal text-xs w-3/4 h-4/5 mr-24'>
+      <div className='bg-white font-normal text-xs w-3/4 h-4/5 mr-16'>
         <form className='w-full h-3/4 mt-4' action="/send-data-here" method="post">
           {/* textarea */}
-          <textarea id="message" class="w-full h-full block p-2.5 text-sm rounded-lg focus:outline-0" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh felis imperdiet vitae amet sit non ut. Ipsum sagittis, leo, semper facilisis urna, tempus. Diam id sit nulla risus risus nunc. Eu eu neque nullam neque vivamus accumsan. Lobortis vitae gravida ornare at. Ac arcu quis ornare quis facilisis cras. Ac arcu nisi massa consectetur non volutpat hac. Ac eget ut aliquam maecenas posuere consequat adipiscing scelerisque. Ipsum dictum aliquet sit gravida rhoncus. A metus, sem bibendum posuere pulvinar diam fringilla. Nulla nunc aenean gravida enim et tortor non vitae mauris.
+          <textarea id="message" class="w-full h-full block p-2.5 text-sm rounded-lg border-0 focus:border-transparent focus:ring-0" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh felis imperdiet vitae amet sit non ut. Ipsum sagittis, leo, semper facilisis urna, tempus. Diam id sit nulla risus risus nunc. Eu eu neque nullam neque vivamus accumsan. Lobortis vitae gravida ornare at. Ac arcu quis ornare quis facilisis cras. Ac arcu nisi massa consectetur non volutpat hac. Ac eget ut aliquam maecenas posuere consequat adipiscing scelerisque. Ipsum dictum aliquet sit gravida rhoncus. A metus, sem bibendum posuere pulvinar diam fringilla. Nulla nunc aenean gravida enim et tortor non vitae mauris.
           Suspendisse orci, et est, dictum placerat semper amet nulla. Volutpat cras aliquet ut sed. Neque, eget lobortis nam lorem id porttitor. Sed quis nam morbi quisque orci proin. Gravida mauris aliquam in in. Quis maecenas facilisis phasellus auctor. Sed ut luctus etiam purus elit urna. Placerat morbi nunc velit, risus tincidunt ac ornare dictum donec. Elit ut nibh eget vel accumsan, neque. Orci in mattis ultricies lobortis neque nisl mollis enim. Euismod et, diam at massa nullam tristique. Purus urna cursus nisl placerat. Non iaculis lectus mauris enim ut consequat malesuada.
           Lacinia id proin habitasse ac dis sem feugiat consequat vel. Sem venenatis in ut fringilla. Amet, sapien suspendisse vitae ultricies dolor. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. Elit ut nibh eget vel accumsan, neque. Orci in mattis ultricies lobortis neque nisl mollis enim. Euismod et, diam at massa nullam tristique. Purus urna cursus nisl placerat. Non iaculis lectus mauris enim ut consequat malesuada.
           Lacinia id proin habitasse ac dis sem feugiat consequat vel. Sem venenatis in ut fringilla. Amet, sapien suspendisse vitae ultricies dolor. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. "></textarea>
@@ -103,9 +103,29 @@ export default function Home() {
       <div className='bg-white font-normal text-sm w-1/4'>
         Saran Koreksi
         
-        {/* correction pop-up */}
-        <div className='rounded-lg bg-purple-light px-5 py-2.5'>
-          <p className='font-bold'>Punctuation</p>
+        {/* correction pop-up 1 */}
+        <div className='rounded-lg bg-purple-light px-5 py-2.5 mt-4'>
+          {/* correction type */}
+          <div className='flex items-center justify-start'>
+            <div className='w-1 h-1 bg-black rounded-full mr-2'></div>
+            <p className='font-bold text-xs'>Punctuation</p>
+          </div>
+          {/* correction explanation */}
+          <div className='text-xs mt-2'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        {/* correction pop-up 2 */}
+        <div className='rounded-lg bg-purple-light px-5 py-2.5 mt-4'>
+          {/* correction type */}
+          <div className='flex items-center justify-start'>
+            <div className='w-1 h-1 bg-black rounded-full mr-2'></div>
+            <p className='font-bold text-xs'>Punctuation</p>
+          </div>
+          {/* correction explanation */}
+          <div className='text-xs mt-2'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
         </div>
       </div>
     </div>
