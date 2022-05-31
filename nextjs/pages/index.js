@@ -8,6 +8,7 @@ export default function Home() {
   // sidebar open and close state
   const[sidebar, setSidebar] = useState(false)
   const[isModal, setModal] = useState(false)
+  const[isLoading, setLoading] = useState(false)
   const[document, setDocument] = useState('')
   const[corrections, setCorrections] = useState({})
   console.log(isModal)
@@ -20,7 +21,11 @@ export default function Home() {
   const handleSubmit = async () => {
     const res = await getCorrection(document);
     setCorrections(res);
-    console.log(`abc ${res}`);
+    if (!('koreksi' in Object.keys(res))){
+      setModal(true);
+    }
+    setLoading(false);
+    console.log(`abc ${Object.keys(res)}`);
   }
   const [userInfo, setUserInfo] = useState();
 
@@ -44,6 +49,7 @@ export default function Home() {
 
   async function getCorrection(text) {
     try {
+      setLoading(true);
       const response = await fetch(`https://salmon-flower-08bbc8500.1.azurestaticapps.net/api/CreateKoreksi?text=${text}&code=RA2cPkOjyNU68LmlSn0_42NnLYVRhKCTrQ9RinxGwbIbAzFuEePHgw==`);
       const payload = await response.json();
       return payload;
@@ -210,6 +216,12 @@ export default function Home() {
             <div>
               <div className="user">
                 <h2>Saran Koreksi</h2>
+                {
+                  isLoading &&
+                    <div>
+                      <h3>Loading...</h3>
+                    </div>
+                }
                 <ul>
                     {corrections.koreksi?.map((item,index)=>{
                         return (
@@ -234,32 +246,7 @@ export default function Home() {
             </div>
           )
         }
-        Saran Koreksi
-        
-        {/* correction pop-up 1 */}
-        <div className='rounded-lg bg-purple-light px-5 py-2.5 mt-4'>
-          {/* correction type */}
-          <div className='flex items-center justify-start'>
-            <div className='w-1 h-1 bg-black rounded-full mr-2'></div>
-            <p className='font-bold text-xs'>Punctuation</p>
-          </div>
-          {/* correction explanation */}
-          <div className='text-xs mt-2'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </div>
-        </div>
-        {/* correction pop-up 2 */}
-        <div className='rounded-lg bg-purple-light px-5 py-2.5 mt-4'>
-          {/* correction type */}
-          <div className='flex items-center justify-start'>
-            <div className='w-1 h-1 bg-black rounded-full mr-2'></div>
-            <p className='font-bold text-xs'>Punctuation</p>
-          </div>
-          {/* correction explanation */}
-          <div className='text-xs mt-2'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </div>
-        </div>
+        {/* Saran Koreksi */}
       </div>
     </div>
     </>
