@@ -5,7 +5,7 @@ import json
 
 
 # def main(req: func.HttpRequest, docs: func.DocumentList) -> func.HttpResponse:
-def main(req: func.HttpRequest, docs: func.DocumentList) -> func.HttpResponse:
+def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python GetKoreksi function processed a request.")
 
     koreksi_list = []
