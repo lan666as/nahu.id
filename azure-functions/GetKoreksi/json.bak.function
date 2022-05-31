@@ -12,6 +12,16 @@
       ]
     },
     {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "docs",
+      "databaseName": "nahu-db",
+      "collectionName": "koreksi",
+      "createIfNotExists": "true",
+      "connectionStringSetting": "AzureCosmosDBConnectionString",
+      "sqlQuery": "SELECT * from c"
+    },
+    {
       "type": "http",
       "direction": "out",
       "name": "$return"

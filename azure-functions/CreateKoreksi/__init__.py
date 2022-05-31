@@ -11,7 +11,8 @@ stanza.download("id")
 nlp = spacy_stanza.load_pipeline("id")
 
 
-def main(req: func.HttpRequest, docs: func.Out[func.Document]) -> func.HttpResponse:
+# def main(req: func.HttpRequest, docs: func.Out[func.Document]) -> func.HttpResponse:
+def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python CreateKoreksi function processed a request.")
 
     text = req.params.get("text")
@@ -68,7 +69,7 @@ def main(req: func.HttpRequest, docs: func.Out[func.Document]) -> func.HttpRespo
 
         logging.info(doc.text)
         return func.HttpResponse(
-            f"Hello. This CreateKoreksi function executed successfully.\n{json.dumps(ret)}"
+            f"Hello, world. This CreateKoreksi function executed successfully.\n{json.dumps(ret)}"
         )
     else:
         return func.HttpResponse(
