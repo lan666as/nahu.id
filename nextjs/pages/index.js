@@ -6,11 +6,21 @@ import Head from 'next/head'
 
 export default function Home() {
   // sidebar open and close state
-  const[sidebar,setSidebar] = useState(false)
+  const[sidebar, setSidebar] = useState(false)
   const[isModal, setModal] = useState(false)
+  const[document, setDocument] = useState('')
+  const[corrections, setCorrections] = useState({})
   console.log(isModal)
   const handleSidebar = () => {
     setSidebar(!sidebar)
+  }
+  const handleTextArea = (e) => {
+    setDocument(e.target.value)
+  }
+  const handleSubmit = async () => {
+    const res = await getCorrection(document);
+    setCorrections(res);
+    console.log(`abc ${res}`);
   }
   const [userInfo, setUserInfo] = useState();
 
@@ -31,6 +41,18 @@ export default function Home() {
       return undefined;
     }
   }
+
+  async function getCorrection(text) {
+    try {
+      const response = await fetch(`https://salmon-flower-08bbc8500.1.azurestaticapps.net/api/CreateKoreksi?text=${text}&code=RA2cPkOjyNU68LmlSn0_42NnLYVRhKCTrQ9RinxGwbIbAzFuEePHgw==`);
+      const payload = await response.json();
+      return payload;
+    } catch (error) {
+      console.error('No profile could be found');
+      return undefined;
+    }
+  }
+
 
   return (
     <>
@@ -115,7 +137,7 @@ export default function Home() {
       <div className='bg-white font-normal text-xs w-3/4 h-4/5 mr-16'>
         <form className='w-full h-3/4 mt-4'  method="post">
           {/* textarea */}
-          <textarea id="message" className="border-transparent focus:border-transparent focus:ring-0 w-full h-full block p-2.5 text-sm rounded-lg outline-none focus:outline-0" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh felis imperdiet vitae amet sit non ut. Ipsum sagittis, leo, semper facilisis urna, tempus. Diam id sit nulla risus risus nunc. Eu eu neque nullam neque vivamus accumsan. Lobortis vitae gravida ornare at. Ac arcu quis ornare quis facilisis cras. Ac arcu nisi massa consectetur non volutpat hac. Ac eget ut aliquam maecenas posuere consequat adipiscing scelerisque. Ipsum dictum aliquet sit gravida rhoncus. A metus, sem bibendum posuere pulvinar diam fringilla. Nulla nunc aenean gravida enim et tortor non vitae mauris.
+          <textarea id="message" onChange={handleTextArea} className="border-transparent focus:border-transparent focus:ring-0 w-full h-full block p-2.5 text-sm rounded-lg outline-none focus:outline-0" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh felis imperdiet vitae amet sit non ut. Ipsum sagittis, leo, semper facilisis urna, tempus. Diam id sit nulla risus risus nunc. Eu eu neque nullam neque vivamus accumsan. Lobortis vitae gravida ornare at. Ac arcu quis ornare quis facilisis cras. Ac arcu nisi massa consectetur non volutpat hac. Ac eget ut aliquam maecenas posuere consequat adipiscing scelerisque. Ipsum dictum aliquet sit gravida rhoncus. A metus, sem bibendum posuere pulvinar diam fringilla. Nulla nunc aenean gravida enim et tortor non vitae mauris.
           Suspendisse orci, et est, dictum placerat semper amet nulla. Volutpat cras aliquet ut sed. Neque, eget lobortis nam lorem id porttitor. Sed quis nam morbi quisque orci proin. Gravida mauris aliquam in in. Quis maecenas facilisis phasellus auctor. Sed ut luctus etiam purus elit urna. Placerat morbi nunc velit, risus tincidunt ac ornare dictum donec. Elit ut nibh eget vel accumsan, neque. Orci in mattis ultricies lobortis neque nisl mollis enim. Euismod et, diam at massa nullam tristique. Purus urna cursus nisl placerat. Non iaculis lectus mauris enim ut consequat malesuada.
           Lacinia id proin habitasse ac dis sem feugiat consequat vel. Sem venenatis in ut fringilla. Amet, sapien suspendisse vitae ultricies dolor. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. Elit ut nibh eget vel accumsan, neque. Orci in mattis ultricies lobortis neque nisl mollis enim. Euismod et, diam at massa nullam tristique. Purus urna cursus nisl placerat. Non iaculis lectus mauris enim ut consequat malesuada.
           Lacinia id proin habitasse ac dis sem feugiat consequat vel. Sem venenatis in ut fringilla. Amet, sapien suspendisse vitae ultricies dolor. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. Rhoncus ut adipiscing vitae nisi. Phasellus vehicula lacinia volutpat enim et morbi. Sed sagittis, vulputate aliquet in arcu sed id. Volutpat convallis varius volutpat morbi eleifend ut. In fermentum, tortor velit, ac vitae, nulla eget purus. At amet, arcu, ac enim lectus. "></textarea>
@@ -124,7 +146,7 @@ export default function Home() {
         </form>
 
          <div className='w-full flex justify-center'>
-            <button onClick={()=>{setModal(true)}} className="mt-12 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black" >
+            <button onClick={()=>{ handleSubmit() }} className="mt-12 shadow-md shadow-purple rounded-full px-5 py-2.5 text-sm font-medium text-center text-white bg-purple hover:text-black" >
               Koreksi Dokumen
             </button>
           </div>
@@ -179,6 +201,35 @@ export default function Home() {
                 <p>Welcome</p>
                 <p>{userInfo && userInfo.userDetails}</p>
                 <p>{userInfo && userInfo.identityProvider}</p>
+              </div>
+            </div>
+          )
+        }
+        {
+          corrections && (
+            <div>
+              <div className="user">
+                <h2>Saran Koreksi</h2>
+                <ul>
+                    {corrections.koreksi?.map((item,index)=>{
+                        return (
+                          <>
+                            {/* correction pop-up 1 */}
+                            <div className='rounded-lg bg-purple-light px-5 py-2.5 mt-4'>
+                              {/* correction type */}
+                              <div className='flex items-center justify-start'>
+                                <div className='w-1 h-1 bg-black rounded-full mr-2'></div>
+                                <p className='font-bold text-xs'>{item.code}</p>
+                              </div>
+                              {/* correction explanation */}
+                              <div className='text-xs mt-2'>
+                                {item.text}
+                              </div>
+                            </div>
+                          </>
+                        )
+                    })}
+                </ul>
               </div>
             </div>
           )
