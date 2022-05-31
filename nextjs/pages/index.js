@@ -1,9 +1,8 @@
 import { FaBars, FaTimes, FaHome,FaSignInAlt ,FaCheckCircle} from 'react-icons/fa'
-// import Image from 'next/image'
 import NextLink from 'next/link'
 import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Home() {
   // sidebar open and close state
@@ -55,7 +54,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
+        <img
             src={"/profile.jpg"}
             alt="Picture of the author"
             width="30px"
@@ -78,7 +77,7 @@ export default function Home() {
         </button>
 
         <div className='pl-8'>
-          <Image
+          <img
             src={"/logo.svg"}
             alt="Nahu.id"
             width="120px" height="60px"
